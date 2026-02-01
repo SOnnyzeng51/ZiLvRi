@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_todo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="@color/card_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="14dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="12dp">
+
+        <!-- 拖动手柄 -->
+        <ImageView
+            android:id="@+id/iv_drag_handle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_drag_handle"
+            android:contentDescription="拖动排序"
+            app:tint="@color/text_hint"/>
+
+        <!-- 复选框 -->
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:button="@null"
+            android:background="@drawable/checkbox_circle"
+            app:buttonTint="@color/primary"/>
+
+        <!-- 内容区域 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/text_primary"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <LinearLayout
+                android:id="@+id/layout_meta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <!-- 时间 -->
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_hint"
+                    android:drawablePadding="4dp"
+                    app:drawableStartCompat="@drawable/ic_time_small"/>
+
+                <!-- 重复次数 -->
+                <TextView
+                    android:id="@+id/tv_repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_hint"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 优先级指示器 -->
+        <View
+            android:id="@+id/view_priority"
+            android:layout_width="4dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_priority_indicator"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

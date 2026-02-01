@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">自律日</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">首页</string>
+    <string name="nav_memo">备忘录</string>
+    <string name="nav_add">添加</string>
+    <string name="nav_profile">我的</string>
+    
+    <!-- Calendar -->
+    <string name="calendar_year">年</string>
+    <string name="calendar_month">月</string>
+    <string name="calendar_week">周</string>
+    <string name="calendar_day">日</string>
+    <string name="today">今天</string>
+    
+    <!-- Todo -->
+    <string name="add_todo_group">添加待办组</string>
+    <string name="add_todo_item">添加待办项</string>
+    <string name="edit_todo">编辑待办</string>
+    <string name="delete_todo">删除待办</string>
+    <string name="todo_completed">已完成</string>
+    <string name="todo_pending">进行中</string>
+    <string name="all_completed">太棒了！今日任务全部完成！</string>
+    
+    <!-- Priority -->
+    <string name="priority_low">低</string>
+    <string name="priority_medium">中</string>
+    <string name="priority_high">高</string>
+    <string name="priority_urgent">紧急</string>
+    
+    <!-- Memo -->
+    <string name="new_memo">新建备忘录</string>
+    <string name="edit_memo">编辑备忘录</string>
+    <string name="memo_title_hint">标题</string>
+    <string name="memo_content_hint">内容</string>
+    
+    <!-- Profile -->
+    <string name="settings">设置</string>
+    <string name="theme">主题</string>
+    <string name="theme_light">浅色模式</string>
+    <string name="theme_dark">深色模式</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="account">账号</string>
+    <string name="login">登录</string>
+    <string name="logout">退出登录</string>
+    <string name="login_with_qq">QQ登录</string>
+    <string name="login_with_wechat">微信登录</string>
+    <string name="level">等级</string>
+    <string name="exp">经验值</string>
+    <string name="total_completed">累计完成</string>
+    <string name="continuous_days">连续打卡</string>
+    <string name="about">关于</string>
+    <string name="version">版本</string>
+    <string name="feedback">意见反馈</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="user_agreement">用户协议</string>
+    
+    <!-- Login -->
+    <string name="welcome">欢迎使用自律日</string>
+    <string name="login_subtitle">开启你的自律之旅</string>
+    <string name="skip_login">暂不登录</string>
+    <string name="guest_mode">游客模式</string>
+    
+    <!-- Common -->
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="confirm">确认</string>
+    <string name="edit">编辑</string>
+    <string name="done">完成</string>
+    <string name="loading">加载中...</string>
+    <string name="no_data">暂无数据</string>
+    <string name="error">出错了</string>
+    <string name="retry">重试</string>
+    
+    <!-- Date format -->
+    <string name="date_format_year_month">yyyy年MM月</string>
+    <string name="date_format_full">yyyy年MM月dd日</string>
+    <string name="date_format_week">EEE</string>
+    
+    <!-- Week days -->
+    <string name="sunday">日</string>
+    <string name="monday">一</string>
+    <string name="tuesday">二</string>
+    <string name="wednesday">三</string>
+    <string name="thursday">四</string>
+    <string name="friday">五</string>
+    <string name="saturday">六</string>
+    
+    <!-- Achievement -->
+    <string name="achievement_unlocked">成就解锁！</string>
+    <string name="first_todo">第一个待办</string>
+    <string name="streak_7">连续7天</string>
+    <string name="streak_30">连续30天</string>
+    <string name="completed_100">完成100个任务</string>
+</resources>

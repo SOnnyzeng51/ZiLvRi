@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:id="@+id/layout_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingVertical="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless">
+
+        <!-- 日期数字 -->
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"/>
+
+        <!-- 状态指示器容器 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 待办指示点 -->
+            <View
+                android:id="@+id/indicator_dot"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_indicator_dot"
+                android:visibility="gone"/>
+
+            <!-- 完成勾选 -->
+            <ImageView
+                android:id="@+id/indicator_check"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/ic_check_small"
+                android:visibility="gone"
+                app:tint="@color/success"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

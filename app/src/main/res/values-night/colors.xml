@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主色调 -->
+    <color name="primary">#34D399</color>
+    <color name="primary_dark">#10B981</color>
+    <color name="primary_light">#6EE7B7</color>
+    <color name="accent">#818CF8</color>
+    
+    <!-- 背景色 -->
+    <color name="background">#111827</color>
+    <color name="surface">#1F2937</color>
+    <color name="card_background">#1F2937</color>
+    
+    <!-- 文字颜色 -->
+    <color name="text_primary">#F9FAFB</color>
+    <color name="text_secondary">#D1D5DB</color>
+    <color name="text_hint">#9CA3AF</color>
+    
+    <!-- 功能色 -->
+    <color name="success">#34D399</color>
+    <color name="warning">#FBBF24</color>
+    <color name="error">#F87171</color>
+    <color name="info">#60A5FA</color>
+    
+    <!-- 优先级颜色 -->
+    <color name="priority_low">#34D399</color>
+    <color name="priority_medium">#FBBF24</color>
+    <color name="priority_high">#FB923C</color>
+    <color name="priority_urgent">#F87171</color>
+    
+    <!-- 其他 -->
+    <color name="divider">#374151</color>
+    <color name="gold">#FFD700</color>
+    <color name="exp_particle">#34D399</color>
+    
+    <!-- 日历 -->
+    <color name="calendar_today_bg">#34D399</color>
+    <color name="calendar_selected_bg">#374151</color>
+    <color name="calendar_weekend">#F87171</color>
+    
+    <!-- 复选框 -->
+    <color name="checkbox_checked">@color/primary</color>
+    <color name="checkbox_unchecked">@color/text_hint</color>
+    
+    <!-- Chip选中/未选中 -->
+    <color name="chip_selected_bg">#34D399</color>
+    <color name="chip_unselected_bg">#374151</color>
+    <color name="chip_selected_text">#111827</color>
+    <color name="chip_unselected_text">#D1D5DB</color>
+</resources>

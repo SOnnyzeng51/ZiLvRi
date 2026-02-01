@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="备份与还原"
+        android:textSize="20sp"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="将数据备份到本地存储或从备份文件还原"
+        android:textSize="13sp"
+        android:textColor="@color/text_hint"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_backup"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:text="备份数据"
+        android:textSize="15sp"
+        app:icon="@drawable/ic_backup"
+        app:iconGravity="start"
+        app:iconPadding="12dp"
+        app:cornerRadius="12dp"
+        style="@style/Widget.Material3.Button.TonalButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_restore"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:text="还原数据"
+        android:textSize="15sp"
+        app:icon="@drawable/ic_restore"
+        app:iconGravity="start"
+        app:iconPadding="12dp"
+        app:cornerRadius="12dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="提示：备份文件将保存在下载目录中"
+        android:textSize="12sp"
+        android:textColor="@color/text_hint"
+        android:gravity="center"/>
+
+</LinearLayout>

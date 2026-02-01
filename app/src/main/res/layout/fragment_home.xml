@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 日历卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- 月份导航 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/btn_prev_month"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_arrow_left"
+                            app:tint="@color/text_secondary"
+                            android:contentDescription="上个月"/>
+
+                        <LinearLayout
+                            android:id="@+id/layout_month_selector"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/tv_current_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2024年1月"
+                                android:textColor="@color/text_primary"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/tv_today_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="今天是周一"
+                                android:textColor="@color/text_hint"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btn_next_month"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_arrow_right"
+                            app:tint="@color/text_secondary"
+                            android:contentDescription="下个月"/>
+
+                    </LinearLayout>
+
+                    <!-- 视图切换按钮组 -->
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chip_group_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center"
+                        app:singleSelection="true"
+                        app:selectionRequired="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_year"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="年"
+                            android:textSize="13sp"
+                            app:chipCornerRadius="18dp"
+                            app:chipBackgroundColor="@color/chip_background_selector"
+                            app:chipStrokeWidth="0dp"
+                            app:checkedIconVisible="false"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_month"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="月"
+                            android:textSize="13sp"
+                            android:checked="true"
+                            app:chipCornerRadius="18dp"
+                            app:chipBackgroundColor="@color/chip_background_selector"
+                            app:chipStrokeWidth="0dp"
+                            app:checkedIconVisible="false"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_week"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="周"
+                            android:textSize="13sp"
+                            app:chipCornerRadius="18dp"
+                            app:chipBackgroundColor="@color/chip_background_selector"
+                            app:chipStrokeWidth="0dp"
+                            app:checkedIconVisible="false"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_day"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="日"
+                            android:textSize="13sp"
+                            app:chipCornerRadius="18dp"
+                            app:chipBackgroundColor="@color/chip_background_selector"
+                            app:chipStrokeWidth="0dp"
+                            app:checkedIconVisible="false"/>
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!-- 星期标题 -->
+                    <LinearLayout
+                        android:id="@+id/layout_week_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="日"
+                            android:textColor="@color/text_hint"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="一"
+                            android:textColor="@color/text_hint"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="二"
+                            android:textColor="@color/text_hint"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="三"
+                            android:textColor="@color/text_hint"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="四"
+                            android:textColor="@color/text_hint"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="五"
+                            android:textColor="@color/text_hint"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="六"
+                            android:textColor="@color/text_hint"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <!-- 日历网格 - 自适应高度 -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_calendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:nestedScrollingEnabled="false"/>
+
+                    <!-- 回到今天按钮 -->
+                    <TextView
+                        android:id="@+id/btn_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"
+                        android:text="回到今天"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 待办事项区域 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_selected_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="今天的待办"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_todo_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 项"
+                        android:textColor="@color/text_hint"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <!-- 空状态 -->
+                <LinearLayout
+                    android:id="@+id/layout_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingVertical="48dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_empty_todo"
+                        android:alpha="0.5"
+                        app:tint="@color/text_hint"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="暂无待办事项"
+                        android:textColor="@color/text_hint"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="点击下方 + 添加新任务"
+                        android:textColor="@color/text_hint"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <!-- 待办列表 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_todos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 庆祝动画 -->
+    <com.ziluri.app.ui.common.CelebrationView
+        android:id="@+id/celebration_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

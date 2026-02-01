@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+    <!-- 阴影/底座 -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M60,110 L20,90 L20,50 L60,30 L100,50 L100,90 Z"/>
+    
+    <!-- 3D侧面 -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M60,100 L25,82 L25,47 L60,28 L95,47 L95,82 Z"/>
+    
+    <!-- 顶面 -->
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M60,20 L25,38 L60,56 L95,38 Z"/>
+    
+    <!-- 大拇指图案 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M55,42 L55,58 C55,60 57,62 59,62 L72,62 C74,62 76,60 76,58 L76,48 C76,46 74,44 72,44 L65,44 L67,38 C68,35 66,32 63,32 L62,32 C60,32 58,34 58,36 L58,42 Z M45,44 L50,44 L50,62 L45,62 Z"/>
+    
+</vector>
